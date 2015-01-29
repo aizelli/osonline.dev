@@ -11,10 +11,21 @@ class CustomerController extends BaseController {
 
         $regras = array(
             'nome' => 'required|min:3',
-            'cpf' => 'required'
+            'cpf' => 'required|numeric',
+            'rg' => 'numeric',
+            'cep' => 'numeric'
+        );
+        
+        $messages =array(
+            'nome.required' => 'Especifique o <strong>Nome</strong>.',
+            'nome.min' => 'O <strong>Nome</strong> digitado é muito curto.',
+            'cpf.required' => 'Especifique o <strong>CPF</strong>.',
+            'cpf.numeric' => 'O <strong>CPF</strong> deve conter apenas números.',
+            'rg.numeric' => 'O <strong>RG</strong> deve conter apenas números.',
+            'cep.numeric' => 'O <strong>CEP</strong> deve conter apenas números.'
         );
 
-        $validacao = Validator::make(Input::all(), $regras);
+        $validacao = Validator::make(Input::all(), $regras, $messages);
 
         if ($validacao->fails()) {
 
@@ -34,7 +45,7 @@ class CustomerController extends BaseController {
             $cliente->bairro = Input::get('bairro');
             $cliente->cidade = Input::get('cidade');
             $cliente->estado = Input::get('estado');
-            $cliente->pais = Input::get('pais');
+            $cliente->pais = 'BRA';
             $cliente->email = Input::get('email');
             $cliente->celular = Input::get('celular');
             $cliente->telefone_res = Input::get('telefone_res');
@@ -88,7 +99,7 @@ class CustomerController extends BaseController {
             $cliente->bairro = Input::get('bairro');
             $cliente->cidade = Input::get('cidade');
             $cliente->estado = Input::get('estado');
-            $cliente->pais = Input::get('pais');
+            $cliente->pais = 'BRA';
             $cliente->email = Input::get('email');
             $cliente->celular = Input::get('celular');
             $cliente->telefone_res = Input::get('telefone_res');

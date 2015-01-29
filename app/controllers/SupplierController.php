@@ -49,7 +49,7 @@ class SupplierController extends BaseController {
             $fornecedor->bairro = Input::get('bairro');
             $fornecedor->cidade = Input::get('cidade');
             $fornecedor->estado = Input::get('estado');
-            $fornecedor->pais = Input::get('pais');
+            $fornecedor->pais = 'BRA';
             $fornecedor->email = Input::get('email');
             $fornecedor->nome_resp = Input::get('nome_resp');
             $fornecedor->celular = Input::get('celular');
@@ -108,7 +108,7 @@ class SupplierController extends BaseController {
             $fornecedor->bairro = Input::get('bairro');
             $fornecedor->cidade = Input::get('cidade');
             $fornecedor->estado = Input::get('estado');
-            $fornecedor->pais = Input::get('pais');
+            $fornecedor->pais = 'BRA';
             $fornecedor->email = Input::get('email');
             $fornecedor->nome_resp = Input::get('nome_resp');
             $fornecedor->celular = Input::get('celular');

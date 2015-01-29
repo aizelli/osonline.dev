@@ -481,7 +481,7 @@ class FormBuilder {
 	 * @param  string  $format
 	 * @return string
 	 */
-	public function selectMonth($name, $selected = null, $options = array(), $format = '%B')
+	public function selectMonth($name, $selected = null, $options = array(), $format = '%m')
 	{
 		$months = array();
 

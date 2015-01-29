@@ -49,7 +49,7 @@
                 {{Form::selectRange('dia', 01, 31, date(('d')), array('class'=>'form-control'))}}
                 </div>
                 <div class="col-md-4">
-                {{Form::selectMonth('mes', date(('m')), array('class'=>'form-control'))}}
+                {{Form::selectMonth('mes', date(('M')), array('class'=>'form-control'))}}
                 </div>
                  <div class="col-md-4">
                 {{Form::selectYear('ano',1920,date(('Y')), date(('Y')), array('class'=>'form-control'))}}
@@ -89,12 +89,35 @@
             <br />
             <div class="input-group">
                 <span class="input-group-addon">Estado</span>
-                {{Form::text('estado','',array('class'=>'form-control'))}}
-            </div>
-            <br />
-            <div class="input-group">
-                <span class="input-group-addon">País</span>
-                {{Form::text('pais','',array('class'=>'form-control'))}}
+                {{Form::select('estado', array(
+                            'AC'=>'Acre',
+                            'AL'=>'Alagoas',
+                            'AP'=>'Amapá',
+                            'AM'=>'Amazonas',
+                            'BA'=>'Bahia',
+                            'CE'=>'Ceará',
+                            'DF'=>'Distrito Federal',
+                            'ES'=>'Espírito Santo',
+                            'GO'=>'Goiás',
+                            'MA'=>'Maranhão',
+                            'MT'=>'Mato Grosso',
+                            'MS'=>'Mato Grosso do Sul',
+                            'MG'=>'Minas Gerais',
+                            'PA'=>'Pará',
+                            'PB'=>'Paraíba',
+                            'PR'=>'Paraná',
+                            'PE'=>'Pernambuco',
+                            'PI'=>'Piauí',
+                            'RJ'=>'Rio de Janeiro',
+                            'RN'=>'Rio Grande do Norte',
+                            'RS'=>'Rio Grande do Sul',
+                            'RO'=>'Rondônia',
+                            'RR'=>'Roraima',
+                            'SC'=>'Santa Catarina',
+                            'SP'=>'São Paulo',
+                            'SE'=>'Sergipe',
+                            'TO'=>'Tocantins'
+                            ), 'SP', array('class'=>'form-control'))}}
             </div>
             <br />
             <div class="input-group">
